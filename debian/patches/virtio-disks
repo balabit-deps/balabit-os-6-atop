@@ -1,0 +1,14 @@
+Description: make atop display statistics for vd* disks as well
+Forwarded: yes
+Author: Marc Haber <mh+debian-packages@zugschlus.de>
+Applied-Upstream: 1.27
+--- a/photosyst.c
++++ b/photosyst.c
+@@ -1146,6 +1146,7 @@
+ 	{ "^fio[a-z][a-z]*$",			{0},  nullmodname, DSKTYPE, },
+ 	{ "/host.*/bus.*/target.*/lun.*/disc",	{0},  abbrevname1, DSKTYPE, },
+ 	{ "^xvd[a-z][a-z]*$",			{0},  nullmodname, DSKTYPE, },
++	{ "^vd[a-z][a-z]*$",			{0},  nullmodname, DSKTYPE, },
+ 	{ "^dasd[a-z][a-z]*$",			{0},  nullmodname, DSKTYPE, },
+ 	{ "^mmcblk[0-9][0-9]*$",		{0},  nullmodname, DSKTYPE, },
+ };

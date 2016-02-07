@@ -1,0 +1,26 @@
+Source: atop
+Section: admin
+Priority: optional
+Maintainer: Marc Haber <mh+debian-packages@zugschlus.de>
+Build-Depends: debhelper (>= 9~), zlib1g-dev, libncurses5-dev
+Standards-Version: 3.9.3
+Homepage: http://www.atconsultancy.nl/atop/home.html
+Vcs-Git: git://git.debian.org/git/collab-maint/atop.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/atop.git;a=summary
+
+Package: atop
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, lsb-base (>= 3.2-14)
+Recommends: cron
+Description: Monitor for system resources and process activity
+ Atop is an ASCII full-screen performance monitor, similar to the top command,
+ but atop only shows the active system-resources and processes, and only shows
+ the deviations since the previous interval.  At regular intervals, it shows
+ system-level activity related to the CPU, memory, swap, disks and network
+ layers, and it shows for every active process the CPU utilization in system
+ and user mode, the virtual and resident memory growth, priority, username,
+ state, and exit code. The process level activity is also shown for processes
+ which finished during the last interval, to get a complete overview about the
+ consumers of things such as CPU time.
+ .
+  Author: Gerlof Langeveld <gerlof@ATComputing.nl>
